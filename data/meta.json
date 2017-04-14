@@ -1,0 +1,30 @@
+{
+    "index": {
+        "title": "Index title",
+        "author": "Author name",
+        "description": "Description of part one",
+        "keywords": "Comma, delimited, for, seo",
+        "url": "https://apps.bostonglobe.com/boston-revealed/",
+        "imageUrl": "https://apps.bostonglobe.com/graphics/path/to/image",
+        "credits": "",
+        "teasers": [],
+        "social": true,
+        "meter": true,
+        "socialConnect": true,
+        "ads": false
+    },
+    "partOne": {
+        "title": "Shaw Memorial Elms",
+        "author": "Author name",
+        "description": "Description of part one",
+        "keywords": "Comma, delimited, for, seo",
+        "url": "https://apps.bostonglobe.com/boston-revealed/shaw-elms",
+        "imageUrl": "https://apps.bostonglobe.com/graphics/path/to/image",
+        "credits": "",
+        "teasers": [],
+        "social": true,
+        "meter": true,
+        "socialConnect": true,
+        "ads": false
+    }
+}

@@ -1,0 +1,75 @@
+// Header Colorizer Mixin
+// gives accessible foreground color based on bg color
+
+header-color(bgcolor)
+    background-color bgcolor
+    if lightness(bgcolor) < 51%
+        color white
+        svg
+            fill white
+    if lightness(bgcolor) < 61%
+        &__title a
+            color white
+    else
+        color #222
+        svg
+            fill #222
+
+.g-header
+    width 100%
+    padding 2em 1.3em 0
+    color #000
+    header-color(#DFE6E3)
+    +mq('bp-2')
+        padding 3em 3em 0
+        
+    &__inner
+        position relative
+        a
+            opacity .75
+            transition .2s ease all
+            &:hover
+                opacity 1
+    &__title
+        text-align center
+        letter-spacing .01em
+        font-size .9rem
+        
+    &__logo
+        top 0
+        position absolute
+        
+    &__share
+        top 0
+        right 0
+        position absolute
+        a
+            text-decoration none
+            
+    &__share-button
+        margin-left 15px
+
+// Logos
+.logo--lg
+    display none
+    +mq('bp-2')
+        display inline-block
+.logo--sm
+    display inline-block
+    +mq('bp-2')
+        display none
+
+#series-logo
+    font-size 0.8rem
+    font-weight bold
+    letter-spacing: 2px
+    text-transform uppercase
+    border 1px solid rgba(0,0,0,0.2)
+    display inline
+    padding .6em .8em
+    text-shadow 0 1px 0 #fff
+    +mq('bp-2')
+        font-size 0.95rem
+        letter-spacing: 2.8px
+        padding .6em 1em
+        
