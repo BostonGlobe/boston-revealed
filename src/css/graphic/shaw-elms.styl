@@ -74,7 +74,7 @@ body
 		width 85%
 		margin 0.4em auto 0
 		color $shaw-dark
-		text-shadow 0 1px 0 #fff
+		text-shadow 0 1px 0 #eee
 		+mq('bp-2')
 			width 80%
 			margin 0.2em auto 0
@@ -118,6 +118,7 @@ body
 		text-align center
 		padding 0.8em 0.5em 0
 		color $shaw-dark
+		text-shadow 0 1px 0 #eee
 
 	&__side-img
 		width 13em
@@ -146,6 +147,131 @@ body
 		text-align center
 		margin-top 2.75em
 	
+	&__figure
+		display none
+		text-shadow none
+		width 100%
+		margin 0 auto
+		+mq('bp-3')
+			display inline
+		
+		.elms-intro
+			width 100%
+			text-shadow 0 1px 0 #fff
+			padding 0 2em
+			margin 2em auto
+			+mq('bp-3')
+				padding 0 3em 1em
+				width 50em
+			+mq('bp-2')
+				padding 0 3em
+			
+			h3
+				font-size 1.45rem
+				text-align center
+				margin-top 1em
+				
+			p
+				font-size 0.9rem
+				line-height 1.6
+				margin-top 0.5em
+				
+		.elms-graphic
+			position relative
+			width 90%
+			margin 0 auto
+			p
+				font-size 0.8rem
+				line-height 1.5
+			.elms-img
+				display block
+				width 100%
+			.elms-label
+				position absolute
+			.label-one
+				top 0%
+				left 20%
+				width 28%
+			.label-two
+				top 0%
+				left 62%
+				width 15%
+			.label-three
+				top 12%
+				left 85%
+				width 15%
+			.label-four
+				top 35%
+				left 88%
+			.label-five-transformed
+				left 62%
+				top 40%
+				transform matrix(0.8662,0.4998,-0.8662,0.4998,0,0) scaleX(1) scaleY(1)
+				transform-origin left top
+				-webkit-transform matrix(0.8662,0.4998,-0.8662,0.4998,0,0) scaleX(1) scaleY(1)
+				-webkit-transform-origin left top
+				-ms-transform matrix(0.8662,0.4998,-0.8662,0.4998,0,0) scaleX(1) scaleY(1)
+				-ms-transform-origin left top
+				color #666
+				white-space nowrap
+				font-size 0.75rem
+				line-height 1.2
+			.label-six-transformed
+				left 43%
+				top 38%
+				transform matrix(0.8662,0.4998,-0.8662,0.4998,0,0) scaleX(1) scaleY(1)
+				transform-origin left top
+				-webkit-transform matrix(0.8662,0.4998,-0.8662,0.4998,0,0) scaleX(1) scaleY(1)
+				-webkit-transform-origin left top
+				-ms-transform matrix(0.8662,0.4998,-0.8662,0.4998,0,0) scaleX(1) scaleY(1)
+				-ms-transform-origin left top
+				color #666
+				white-space nowrap
+				font-size 0.75rem
+				line-height 1.2
+			.label-seven
+				top 23%
+				left 6%
+				width 30%
+				background #fff
+				padding 1em
+				box-shadow 0 0 10px #C6D2CD
+			.label-eight
+				top 48%
+				left 0%
+				width 30%
+			.label-nine
+				top 84.25%
+				left 44.5%
+			.label-ten
+				top 68%
+				right 81%
+			.label-eleven-transformed
+				left 48%
+				top 73%
+				transform matrix(0.8662,-0.4998,0.8662,0.4998,0,0) scaleX(1) scaleY(1)
+				transform-origin left top
+				-webkit-transform matrix(0.8662,-0.4998,0.8662,0.4998,0,0) scaleX(1) scaleY(1)
+				-webkit-transform-origin left top
+				-ms-transform matrix(0.8662,-0.4998,0.8662,0.4998,0,0) scaleX(1) scaleY(1)
+				-ms-transform-origin left top
+				color #96AE74
+				white-space nowrap
+				font-size 0.75rem
+				line-height 1.2
+			.label-twelve
+				top 88.5%
+				left 40.5%
+				width 30%
+	
+	&__figure-mobile
+		display inline
+		text-shadow none
+		width 100%
+		margin 0 auto
+		+mq('bp-3')
+			display none
+
 	&__caretakers
 		display block
 		+mq('bp-3')
