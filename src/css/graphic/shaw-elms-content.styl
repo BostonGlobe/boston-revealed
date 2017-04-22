@@ -1,0 +1,66 @@
+.content
+	width 100%
+	text-shadow 0 1px 0 #fff
+	+mq('bp-2')
+		padding 0 3em
+	
+	&__container
+		padding 0 2em
+		margin 2em auto
+		+mq('bp-3')
+			padding 1em 3em
+			width 50em
+		
+	&__hed
+		font-size 1.9rem
+		text-align center
+		padding 0.2em 0
+		letter-spacing -0.01em
+		+mq('bp-2')
+			font-size 2.6rem
+
+	&__body
+		font-size 1.1rem
+		line-height 1.7
+		margin-bottom 1.1em
+		+mq('bp-2')
+			font-size 1.25rem
+	
+	&__img
+		margin 0 auto
+		width 100%
+		box-shadow 0 1px 2px #fff
+	
+	&__caption
+		font-size 0.75rem
+		text-align center
+		padding 0.8em 0.5em 0
+		color $shaw-dark
+		text-shadow 0 1px 0 #eee
+
+	&__side-img
+		width 13em
+		margin 2em auto 1.5em
+		+mq('bp-2')
+			margin 1em 0 1em 3em
+			display inline
+			float right
+
+	a.shaw-link
+		color $shaw-link
+		text-decoration none
+		border-bottom 3px solid rgba(127,66,75,0.3)
+		padding-bottom 2px
+		transition all 0.5s ease
+			
+	a:hover.shaw-link, a:visited.shaw-link
+		color $shaw-link
+		text-decoration none
+		border-bottom 3px solid rgba(127,66,75,0.9)
+		padding-bottom 2px
+		transition all 0.5s ease
+		
+	h3
+		font-size 1.45rem
+		text-align center
+		margin-top 2.75em

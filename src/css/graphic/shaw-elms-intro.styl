@@ -1,0 +1,81 @@
+body
+    background-color $shaw-light
+
+.intro
+	position relative
+	margin 2em 0 0
+	+mq('bp-2')
+		margin 3em 3em 1em
+	
+	&__img
+		width 100%
+		+mq('bp-2')
+			display block
+		.hed-img
+			display none
+			+mq('bp-2')
+				display inline
+		.hed-img-mobile
+			display inline
+			+mq('bp-2')
+				display none
+
+	&__heading
+		position absolute
+		top 55%
+		left 0
+		right 0
+		width 100%
+		border-radius 2px
+		text-shadow 0 1px 0 #fff
+		+mq('bp-2')
+			top 45%
+		+mq('bp-3')
+			top 6%
+	
+	&__inner-heading
+		background rgba(255,255,255,0.9)
+		padding 1.5em 0
+		margin:0 auto;
+		text-align center
+		+mq('bp-1')
+			width 22em
+		+mq('bp-3')
+			width 32em
+			padding 2em 0
+		
+	&__title
+		color #222
+		font-size 1.9rem
+		font-weight 400
+		letter-spacing -0.01em
+		+mq('bp-3')
+			font-size 3rem
+		&:after
+			content ''
+			display block
+			width 1em
+			border-top 4px solid $shaw-medium
+			margin 0.4em auto 0.5em
+			
+	&__summary
+		color #222
+		font-size 0.85rem
+		line-height 1.5
+		font-style italic
+		letter-spacing -0.01em
+		+mq('bp-3')
+			font-size 1.2rem
+
+	&__caption
+		display block
+		font-size 0.75rem
+		line-height 1.6
+		width 85%
+		margin 0.4em auto 0
+		color $shaw-dark
+		text-shadow 0 1px 0 #eee
+		+mq('bp-2')
+			width 80%
+			margin 0.2em auto 0
+			font-size 0.8rem

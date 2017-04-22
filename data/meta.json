@@ -1,9 +1,9 @@
 {
     "index": {
-        "title": "Index title",
+        "title": "Boston Revealed",
         "author": "Author name",
         "description": "Description of part one",
-        "keywords": "Comma, delimited, for, seo",
+        "keywords": "boston, boston history, boston revealed",
         "url": "https://apps.bostonglobe.com/boston-revealed/",
         "imageUrl": "https://apps.bostonglobe.com/graphics/path/to/image",
         "credits": "",
@@ -15,11 +15,11 @@
     },
     "partOne": {
         "title": "Shaw Memorial Elms",
-        "author": "Author name",
-        "description": "Description of part one",
-        "keywords": "Comma, delimited, for, seo",
+        "author": "Amanda Erickson",
+        "description": "The oldest English elms in the Western Hemisphere",
+        "keywords": "english elms, shaw memorial, arborist, john hancock, boston, boston revealed, civil war, boston common, history, boston history, massachusetts, globe, boston globe",
         "url": "https://apps.bostonglobe.com/boston-revealed/shaw-elms",
-        "imageUrl": "https://apps.bostonglobe.com/graphics/path/to/image",
+        "imageUrl": "https://apps.bostonglobe.com/boston-revealed/series/shaw-elms/assets/shaw-elms/shaw-elms-og.jpg",
         "credits": "",
         "teasers": [],
         "social": true,

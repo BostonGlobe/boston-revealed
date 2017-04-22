@@ -1,0 +1,30 @@
+.content
+	&__caretakers
+		// display block
+		+mq('bp-3')
+			display flex
+		&__profile
+			// display flex
+			// padding 0 15px
+			margin-top 1em
+			width 100%
+		&__bio
+			margin-right 2.5em
+			h4
+				font-size 0.9rem
+				font-weight 900
+				margin-bottom 0.3em
+			p
+				font-size 0.85rem
+				line-height 1.4
+				
+	&__endnote
+		font-size 0.9rem
+		text-align center
+		margin 6em auto
+		&:before
+			content ''
+			display block
+			width 2em
+			border-top 4px solid $shaw-medium
+			margin 1.5em auto
