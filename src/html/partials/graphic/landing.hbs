@@ -1,0 +1,188 @@
+<head>
+<style>
+
+body, .g-header {background-color: #fff;}
+
+h1 {
+	font-size:2vw;
+	text-align:center;
+	margin:2.5em auto 2em;
+	animation: fadein 2.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.story-container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: stretch;
+    max-width: 90em;
+    margin: 0 auto;
+}    
+ 
+.story-items-default {
+    height: 20em;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+    margin: 1em;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover .story-items-default {
+	opacity: 0.75;
+}
+    
+ .story-item-1 {
+ 	height: 600px;
+    flex-grow: 2;
+    flex-shrink: 0;
+    flex-basis: 60%;
+    margin: 1em;
+}
+
+.featured-sidebar {
+	display: inline-flex;
+    flex-direction: column;
+}
+ .story-item-2 {
+ 	width: 20em;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 10em;
+    margin: 1em 0em;
+}
+  
+ .story-item-box {
+ 	width: 20em;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 200px;
+}
+
+.inner-content {
+	width: 100%;
+	margin:0 auto;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	z-index: 9999;
+}
+
+h3 {
+	font-size: 1.4rem;
+	line-height: 1.3;
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+}
+
+h3 a {
+	color: #000;
+	text-decoration: none;
+}
+
+.super-inner-content {
+	padding: 1em 1.15em;
+	background: rgba(255,255,255,0.9);
+}
+
+.story-photo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	max-width: 100%;
+	max-height: 100%;
+	object-fit:cover;
+	z-index:1;
+}
+
+.fort-independence-img {background-image: url('../assets/fort-independence/fort-independence.jpg');}
+.shaw-elms-img {background-image: url('../assets/shaw-elms/shaw-elms-og.jpg');}
+.creepy-storytime-img {background-image: url('../assets/shaw-elms/shaw-elms-current.jpg');}
+.harry-houdini-img {background-image: url('../assets/shaw-elms/shaw-bricks.jpg');}
+.sullivans-img {background-image: url('../assets/fort-independence/fort-independence.jpg');}
+.franco-american-img {background-image: url('../assets/shaw-elms/shaw-elms-current.jpg');}
+.back-bay-img {background-image: url('../assets/shaw-elms/shaw-bricks.jpg');}
+
+</style>
+</head>
+
+<section class="intro">
+	<h1 class="miller-banner-regular">A new series devoted to uncovering Boston’s little-known history</h1>
+</section>
+
+<section class="story-container">
+
+	<a class="story-items-default story-item-1" href="#">
+		<div class="story-items-default story-item-1" >
+			<div class="inner-content">
+				<div class="super-inner-content">
+					<h3 class="miller-banner-regular">Fort Independence</h3>
+				</div>
+			</div>
+			<img class="story-photo" src="/assets/fort-independence/fort-independence.jpg">
+		</div>
+	</a>
+
+	<div class="featured-sidebar">
+
+		<div class="story-items-default story-item-2 shaw-elms-img">
+			<div class="inner-content">
+			<div class="super-inner-content">
+				<h3 class="miller-banner-regular">Shaw Memorial Elms</h3>
+			</div>
+			</div>
+		</div>
+
+		<div class="story-items-default story-item-2 creepy-storytime-img">
+			<div class="inner-content">
+			<div class="super-inner-content">
+				<h3 class="miller-banner-regular">Creepy Storytime Title</h3>
+			</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="story-items-default story-item-box harry-houdini-img">
+		<div class="inner-content">
+			<div class="super-inner-content">
+			<h3 class="miller-banner-regular">Harry Houdini's Jump</h3>
+			</div>
+		</div>
+	</div>
+	<div class="story-items-default story-item-box sullivans-img">
+		<div class="inner-content">
+			<div class="super-inner-content">
+			<h3 class="miller-banner-regular">Sullivan's</h3>
+			</div>
+		</div>
+	</div>
+	<div class="story-items-default story-item-box franco-american-img">
+		<div class="inner-content">
+			<div class="super-inner-content">
+			<h3 class="miller-banner-regular">Franco American School</h3>
+			</div>
+		</div>
+	</div>
+	<div class="story-items-default story-item-box back-bay-img">
+		<div class="inner-content">
+			<div class="super-inner-content">
+			<h3 class="miller-banner-regular">Back Bay Secrets</h3>
+			</div>
+		</div>
+	</div>
+</section>

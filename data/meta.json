@@ -26,5 +26,19 @@
         "meter": true,
         "socialConnect": true,
         "ads": false
+    },
+    "partTwo": {
+        "title": "Fort Independence",
+        "author": "Amanda Erickson",
+        "description": "The oldest continuously fortified site in British North America",
+        "keywords": "fort independence, castle island, boston, boston revealed, civil war, history, boston history, massachusetts, globe, boston globe",
+        "url": "https://apps.bostonglobe.com/boston-revealed/series/fort-independence",
+        "imageUrl": "https://apps.bostonglobe.com/boston-revealed/assets/fort-independence/fort-independence-og.jpg",
+        "credits": "",
+        "teasers": [],
+        "social": true,
+        "meter": true,
+        "socialConnect": true,
+        "ads": false
     }
 }
