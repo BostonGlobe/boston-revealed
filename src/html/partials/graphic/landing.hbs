@@ -43,19 +43,21 @@ h1 {
 
 a:hover .story-items-default {
 	opacity: 0.75;
+	transition: all .3s ease;
 }
     
  .story-item-1 {
- 	height: 600px;
+ 	height: 42em;
     flex-grow: 2;
     flex-shrink: 0;
     flex-basis: 60%;
-    margin: 1em;
+    margin: 1em .5em;
 }
 
 .featured-sidebar {
 	display: inline-flex;
     flex-direction: column;
+    margin: 0 1em;
 }
  .story-item-2 {
  	width: 20em;
@@ -126,7 +128,7 @@ h3 a {
 
 <section class="story-container">
 
-	<a class="story-items-default story-item-1" href="#">
+	{{!-- <a class="story-items-default story-item-1" href="#">
 		<div class="story-items-default story-item-1" >
 			<div class="inner-content">
 				<div class="super-inner-content">
@@ -135,10 +137,21 @@ h3 a {
 			</div>
 			<img class="story-photo" src="/assets/fort-independence/fort-independence.jpg">
 		</div>
+	</a> --}}
+	
+	<a class="story-items-default story-item-1" href="">
+	<div class="story-items-default story-item-1 fort-independence-img">
+		<div class="inner-content">
+			<div class="super-inner-content">
+			<h3 class="miller-banner-regular">Fort Independence</h3>
+			</div>
+		</div>
+	</div>
 	</a>
 
 	<div class="featured-sidebar">
 
+		<a href="#">
 		<div class="story-items-default story-item-2 shaw-elms-img">
 			<div class="inner-content">
 			<div class="super-inner-content">
@@ -146,7 +159,9 @@ h3 a {
 			</div>
 			</div>
 		</div>
-
+		</a>
+	
+		<a href="#">
 		<div class="story-items-default story-item-2 creepy-storytime-img">
 			<div class="inner-content">
 			<div class="super-inner-content">
@@ -154,9 +169,11 @@ h3 a {
 			</div>
 			</div>
 		</div>
+		</a>
 
 	</div>
 
+	<a href="#">
 	<div class="story-items-default story-item-box harry-houdini-img">
 		<div class="inner-content">
 			<div class="super-inner-content">
@@ -164,6 +181,8 @@ h3 a {
 			</div>
 		</div>
 	</div>
+	</a>
+	<a href="#">
 	<div class="story-items-default story-item-box sullivans-img">
 		<div class="inner-content">
 			<div class="super-inner-content">
@@ -171,6 +190,8 @@ h3 a {
 			</div>
 		</div>
 	</div>
+	</a>
+	<a href="#">
 	<div class="story-items-default story-item-box franco-american-img">
 		<div class="inner-content">
 			<div class="super-inner-content">
@@ -178,6 +199,8 @@ h3 a {
 			</div>
 		</div>
 	</div>
+	</a>
+	<a href="#">
 	<div class="story-items-default story-item-box back-bay-img">
 		<div class="inner-content">
 			<div class="super-inner-content">
@@ -185,4 +208,5 @@ h3 a {
 			</div>
 		</div>
 	</div>
+	</a>
 </section>
