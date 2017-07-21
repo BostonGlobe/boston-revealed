@@ -1,11 +1,218 @@
 <head>
 <style>
-body, .g-header {background-color: #F6F2DF;}
-.intro__title:after {border-top:4px solid #D0B84E;}
+body, .g-header {background-color: /* #F6F2DF */ #fff;}
+/*.intro__title:after {border-top:4px solid #D0B84E;} */
+
+.d-container, .d-flex {
+    box-sizing: border-box;
+}
+
+.d-container {
+    background: #f7f7f7;
+    border-bottom: 1px solid #eee;
+    margin: 2em auto;
+    padding: 2em 5%;
+    width: 100%;
+}
+
+.d-flex-order {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.d-flex-order>li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    list-style: none;
+}
+
+.d-flex-order>li a {
+    color: #333;
+    background: #fff;
+    border: 1px solid #ddd;
+    display: flex;
+    width: 100%;
+    margin: 1em;
+    padding: 1.5em;
+    text-decoration: none;
+    -webkit-transition: background .35s ease;
+    transition: background .35s ease;
+    background: url('http://apps.bostonglobe.com/boston-revealed/assets/shaw-elms/mhs-shaw-dedication.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 35em;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-flex-order>li a:hover {
+	opacity: 0.75;
+	transition: 0.3s ease;
+}
+
+.d-flex-order>li h2 {
+    display: block;
+    font-size: 2rem;
+    line-height: 1.3;
+    color: #000;
+    background: rgba(255,255,255,0.95);
+    padding: 0.5em;
+    border-radius: 2px;
+}
+
+.d-flex-order>li time {
+    color: #666;
+    display: none;
+    margin: .5em 0 1em;
+}
+
+.d-flex-order>li p {
+    display: none;
+    color: #000;
+}
+
+.d-flex-order>li.d-flex-pinned {
+    -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+    -ms-flex-order: -1;
+    order: -1;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+}
+
+@media (min-width: 48em) {
+	.d-flex-order>li {
+	    -webkit-box-flex: 0;
+	    -webkit-flex: 0 0 33%;
+	    -ms-flex: 0 0 33%;
+	    flex: 0 0 33%;
+	}
+	.d-flex-order>li.d-flex-pinned {
+	    -webkit-box-flex: 0;
+	    -webkit-flex: 0 0 66%;
+	    -ms-flex: 0 0 66%;
+	    flex: 0 0 66%;
+	}
+}
+
 </style>
 </head>
 
-<section class='intro'>
+<section>
+<figure class="d-container">
+	<ul class="d-flex-order">
+		<li>
+			<a href="#">
+			<h2>Headline</h2>
+			<time datetime="2014-08-13">13th August</time>
+			<p>A summary about some stuff</p>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+			<h2>Headline 2</h2>
+			<time datetime="2014-07-10">10th July</time>
+			<p>A summary about some stuff</p>
+			</a>
+		</li>
+		<li class="d-flex-pinned">
+			<a href="#">
+			<h2>Headline 3</h2>
+			<time datetime="2014-06-18">18th June</time>
+			<p>This box will come first because it is pinned, even though in the DOM it actually comes third. I've also emulated how you might display a feature item, doubling its space to give priority to it.</p>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+			<h2>Headline 4</h2>
+			<time datetime="2014-03-04">4th March</time>
+			<p>A summary about some stuff</p>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+			<h2>Five</h2>
+			<time datetime="2014-02-16">16th February</time>
+			<p>A summary about some stuff this time its much longer than before because flexbox</p>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+			<h2>Headline Six</h2>
+			<time datetime="2014-01-30">30th January</time>
+			<p>A summary about some stuff this time its much longer than before because flexbox</p>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+			<h2>Headline Seven and More and Longer and Longer and a little more too</h2>
+			<time datetime="2014-01-15">15th January</time>
+			<p>A summary about some stuff this time its much longer than before because flexbox</p>
+			</a>
+		</li>
+	</ul>
+</figure>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <section class='intro'>
 	<div class='intro__img'>
 		<figure>
 			<img class='hed-img' src='/boston-revealed/assets/fort-independence/fort-independence.jpg' alt='Shaw Memorial Dedication'/>
@@ -21,4 +228,4 @@ body, .g-header {background-color: #F6F2DF;}
 	<figcaption>
 		<p class='intro__caption benton-regular' style="text-align:center;">This is a new caption for this Fort Independence header photo.</p>
 	</figcaption>
-</section>
+</section> --}}
