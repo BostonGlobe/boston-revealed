@@ -1,11 +1,20 @@
 {
-	"copy": {
-		"google": {
-			"id": "1-jMnTIf9SfHCGcun6MtUWudQCELm812MMI5UYU09yZQ"
-		},
-		"methode": {
-			"story": []
-		}
-	},
-	"path": "boston-revealed"
+  "copy": {
+    "google": [{
+        "id": "1-jMnTIf9SfHCGcun6MtUWudQCELm812MMI5UYU09yZQ"
+      },
+      {
+        "id": "1UmC7wqjo3oXEmwn35UEeZt7xKy7vgKPZE1eAuWwxM1g",
+        "filename": "test"
+      },
+      {
+        "id": "1WXI8T81lXo1jm7A4mFptgBqkaustnLImR_A7yTLx_ew",
+        "filename": "test"
+      }
+    ],
+    "methode": {
+      "story": []
+    }
+  },
+  "path": "boston-revealed"
 }
