@@ -1,0 +1,132 @@
+<style>
+.g-header__inner {
+	display:flex;
+	justify-content:space-between;
+	align-items: center;
+	padding: 3em;
+}
+.share-tools {
+	display:flex;
+	justify-content:space-between;
+	align-items: flex-start;
+}
+.share-btn {
+	padding: 0 0 0 15px;
+}
+a.title {
+	/* text-transform: uppercase;
+    letter-spacing: .3em; */
+    font-size: 18px;
+    /* border: 1px solid #d4d4d4;
+    padding: .8em .8em .6em .9em; */
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    padding-bottom: 5px;
+    text-decoration: none;
+    color: #222;
+}
+.title a:hover {
+    border-bottom: 1px solid rgba(0,0,0,1);
+    background: red;
+}
+
+
+
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.9);
+    overflow-y: hidden;
+}
+
+.overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    list-style: none;
+    margin-left: -2em;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 32px;
+    color: rgba(0,0,0, 0.95);
+    display: block;
+	/* border-bottom: 1px solid rgba(0,0,0, 1);
+    border-top: 1px solid rgba(0,0,0, 1);
+    max-width: 45em;
+    margin: -1px auto; */
+}
+
+.overlay a:hover, .overlay a:focus {
+    /* color: rgba(0,0,0, 0.5);
+	border-bottom: 1px solid rgba(0,0,0,.5);
+    border-top: 1px solid rgba(0,0,0,.5);
+    opacity: 0.25; */
+    opacity: 0.5;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 5px;
+    left: 40px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+.menu-item {
+	padding: 1.5em 0;
+}
+</style>
+<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+</script>
+
+<a href="#content" class="skip-to-main">Skip to main content</a>
+<header class="g-header">
+	<div class="g-header__inner">
+
+		<div class="g-header__nav" style="font-size:21px;cursor:pointer" onclick="openNav()">
+			@@include('menu.svg')
+		</div>
+		<div id="myNav" class="overlay">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">@@include('close.svg')</a>
+		  <ul class="overlay-content">
+		    <li class="menu-item"><a class="miller-text-bold" href="#">Shaw Memorial Elms</a></li>
+		    <li class="menu-item"><a class="miller-text-bold" href="#">The Golden Grasshopper</a></li>
+		    <li class="menu-item"><a class="miller-text-bold" href="#">The Rainbow Swash</a></li>
+		    <li class="menu-item"><a class="miller-text-bold" href="#">Back Bay</a></li>
+		  </div>
+		</ul>
+
+		<div style="">
+			<a class="title" href="{{@root.meta.index.sectionUrl}}"><p class="miller-text-bold">Boston Revealed</p></a>
+		</div>
+		<div class="share-tools">
+			<a href="http://www.bostonglobe.com"><p>@@include('g-logo--sm.svg')</p></a>
+			<a href="http://www.bostonglobe.com"><p class="share-btn">@@include('facebook.svg')</p></a>
+			<a href="http://www.bostonglobe.com"><p class="share-btn">@@include('twitter.svg')</p></a>
+		</div>
+	</div>
+</header>

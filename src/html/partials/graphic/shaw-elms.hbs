@@ -1,0 +1,35 @@
+{{#each shawelms.sections}}
+    {{#if partial}}
+        {{> (lookup . 'partial') }}
+    {{else}}
+    <section class="content">
+        <div class="content__container">
+
+            <h2 class="content__hed miller-banner-regular">{{subhed}}</h2>
+
+            {{#each text}}
+                <p class="content__body">{{{value}}}</p>
+
+                {{#ifEquals type 'image'}}
+                    <img src="/{{@root.config.path}}/assets/shaw-elms/{{value}}.jpg" />
+                {{/ifEquals}}
+
+            {{/each}}
+
+            <h3 class="miller-banner-regular">{{h3}}</h3>
+
+            <div class="content__caretakers">
+            {{#if about}}
+                {{#each about}}
+                    <div class="content__caretakers__profile">
+                        <h4 class="benton-bold">{{name}}</h4>
+                        <p class="benton-regular">{{bio}}</p>
+                    </div>
+                {{/each}}
+            {{/if}}
+            </div>
+
+        </div>
+    </section>
+    {{/if}}
+{{/each}}

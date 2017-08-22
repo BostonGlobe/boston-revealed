@@ -1,6 +1,6 @@
 // Header Colorizer Mixin
 // gives accessible foreground color based on bg color
-
+            
 header-color(bgcolor)
     background-color bgcolor
     if lightness(bgcolor) < 51%
@@ -19,11 +19,13 @@ header-color(bgcolor)
     width 100%
     padding 2em 1.3em 0
     color #000
-    header-color(#DFE6E3)
+    // header-color(#DFE6E3)
+    background-color primaryColor
     +mq('bp-2')
-        padding 3em 3em 0
+        padding 3em
         
     &__inner
+        display flex
         position relative
         a
             opacity .75
@@ -34,6 +36,7 @@ header-color(bgcolor)
         text-align center
         letter-spacing .01em
         font-size .9rem
+        margin .75em auto 0
         
     &__logo
         top 0
@@ -48,16 +51,32 @@ header-color(bgcolor)
             
     &__share-button
         margin-left 15px
+    
+.menu-btn
+    position absolute
+    top 0
+    left 0
+    background-color transparent
+    border none
+
+/*.menu-open .menu-btn--default
+    display none
+
+.menu-open .menu-btn--close
+    display block*/
+    
+
+
 
 // Logos
-.logo--lg
-    display none
-    +mq('bp-2')
-        display inline-block
+// .logo--lg
+//     display none
+//     +mq('bp-2')
+//         display inline-block
 .logo--sm
     display inline-block
-    +mq('bp-2')
-        display none
+    // +mq('bp-2')
+    //     display none
 
 #series-logo
     font-size 0.8rem

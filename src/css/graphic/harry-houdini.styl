@@ -1,0 +1,130 @@
+body
+    background-color $partOne
+
+
+
+// section
+//   container($pad:30px, $mw: 800px)
+//   background $tomato
+  
+//   figure
+//     column(1/3)
+//     background darken($tomato, 10%)
+//     height 100px
+//     text-align center
+//     line-height 100px
+//     color #fff
+//     margin 2em auto
+    // @media (max-width: 700px)
+    //   column(1)
+      
+/* includes "basic-style" */
+/* this approach takes advantage of a specific set of $break-points... */
+/* it's pretty much the only time I use max-width - so, you'll have to look into it to see how it works. It's a little more *setup* - but I use these break-points in every project anyways - so for me, it's the lightest - and least hacky solution I've found so far. */
+
+
+// define breakpoints and store in variables for later use
+// these are what I use site wide - and are adjusted for each project specifically when things get 'ugly' - (not "standard" device size)
+$bp-1 = 400px
+$bp-2 = 700px
+$bp-3 = 1000px
+$bp-4 = 1300px
+$bp-5 = 1700px
+
+// get variables for quick use
+$break-point-1 = 'screen and (min-width: $bp-1)'
+$break-point-2 = 'screen and (min-width: $bp-2)'
+$break-point-3 = 'screen and (min-width: $bp-3)'
+$break-point-4 = 'screen and (min-width: $bp-4)'
+$break-point-5 = 'screen and (min-width: $bp-5)'
+
+// define the edge of the break-point
+$bp-1-2 = $bp-2 - 1px
+$bp-2-3 = $bp-3 - 1px
+$bp-3-4 = $bp-4 - 1px
+$bp-4-5 = $bp-5 - 1px
+
+// define min and max for the grid break-points
+// this is so that it isn't nessesary to overwrite/ride the styles at each subsequent break-point
+$break-point-1-2 = 'screen and (min-width: $bp-1) and (max-width: $bp-1-2)'
+$break-point-1-3 = 'screen and (min-width: $bp-1) and (max-width: $bp-2-3)'
+$break-point-1-4 = 'screen and (min-width: $bp-1) and (max-width: $bp-3-4)'
+$break-point-1-5 = 'screen and (min-width: $bp-1) and (max-width: $bp-4-5)'
+
+$break-point-2-3 = 'screen and (min-width: $bp-2) and (max-width: $bp-2-3)'
+$break-point-2-4 = 'screen and (min-width: $bp-2) and (max-width: $bp-3-4)'
+$break-point-2-5 = 'screen and (min-width: $bp-2) and (max-width: $bp-4-5)'
+
+$break-point-3-4 = 'screen and (min-width: $bp-3) and (max-width: $bp-3-4)'
+$break-point-3-5 = 'screen and (min-width: $bp-3) and (max-width: $bp-4-5)'
+
+$break-point-4-5 = 'screen and (min-width: $bp-4) and (max-width: $bp-4-5)'
+
+
+// The actual grid rule / mixin - is short and sweet, but depends on the break-point system outlined above.
+grid-in($parts = 1, $gutter = 2%)
+    li
+        width: 100%
+        float: left
+        width: (  (100%/$parts) -  (  ( ($parts - 1) * $gutter )  / ($parts)   ) )
+        margin-right: 1em
+        &:nth-of-type( {$parts}n + {$parts} )
+            margin-right: 0
+            background: pink
+
+// list to split // the actual implementaion happens on the 'list'
+.example-01
+    .block-list
+        @media $break-point-1-2
+            grid-in(2, 2%)
+        @media $break-point-2-3
+            grid-in(3, 1.5%)
+        @media $break-point-3-4
+            grid-in(4, 1%)
+        @media $break-point-4-5
+            grid-in(5, .8%)
+        @media $break-point-5
+            grid-in(6, .6%)
+
+.example-02
+  .block-list
+        @media $break-point-2-3
+          grid-in(2, 1.5%)
+        @media $break-point-3-4
+          grid-in(3, 1%)
+        @media $break-point-4-5
+          grid-in(4, .8%)
+        @media $break-point-5
+          grid-in(5, .6%)
+
+.example-03
+    .block-list
+        @media $break-point-1-2
+            grid-in(3, 2%)
+        @media $break-point-2-3
+            grid-in(4, 1.5%)
+        @media $break-point-3-4
+            grid-in(5, 1%)
+        @media $break-point-4-5
+            grid-in(6, .8%)
+        @media $break-point-5
+            grid-in(7, .6%)
+
+.color
+    background: blue
+
+.block-list
+    width: 100%
+    float: left
+    margin: 1em
+    padding: 2em
+    background: cyan
+    li
+        display: block
+        width: 100%
+        float: left
+        margin-bottom: $pad
+        background: $white
+        padding 2em
+        margin 1em
+        // padding: $pad*6 $pad

@@ -1,0 +1,15 @@
+<nav style="margin:2em auto;padding:2em;background:yellow;max-width:15em;width:100%;">
+	<ul style="list-style:none;text-align:center;">
+		<li style="margin:1em 0;">{{@root.navigation.heading}}</li>
+		<li style="margin:1em 0;">{{@root.navigation.hed}}</li>
+		<li style="margin:1em 0;">{{@root.navigation.dek}}</li>
+	</ul>
+</nav>
+
+{{#each @root.navigation.blah}}
+  <p>{{this}}</p>
+{{/each}}
+
+{{#each @root.navigation.intro}}
+	<p>{{{value}}}</p>
+{{/each}}

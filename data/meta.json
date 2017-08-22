@@ -40,5 +40,19 @@
         "meter": true,
         "socialConnect": true,
         "ads": false
+    },
+    "partThree": {
+        "title": "Harry Houdini",
+        "author": "Amanda Erickson",
+        "description": "",
+        "keywords": "boston, boston revealed, history, boston history, massachusetts, globe, boston globe",
+        "url": "https://apps.bostonglobe.com/boston-revealed/series/harry-houdini",
+        "imageUrl": "",
+        "credits": "",
+        "teasers": [],
+        "social": true,
+        "meter": true,
+        "socialConnect": true,
+        "ads": false
     }
 }

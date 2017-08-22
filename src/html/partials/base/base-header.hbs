@@ -1,18 +1,179 @@
+<head>
+<style>
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    left: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+</style>
+<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+</script>
+</head>
+
 <a href='#content' class='skip-to-main'>Skip to main content</a>
 <header class='g-header'>
 	<div class='g-header__inner'>
-		<div class="g-header__logo">
-			<a href='http://www.bostonglobe.com'>
-				@@include('g-logo.svg')
-				@@include('g-logo--sm.svg')
+
+		{{!-- <div class="g-header__logo">
+			<a href='#' class='g-header__share-button g-header__share-button--fb'>
+				@@include('menu.svg')
 			</a>
+			<nav>
+			    <ul>
+			      <li><a class="link" href="javascript:;">Work</a></li>
+			      <li><a class="link" href="javascript:;">Services</a></li>
+			      <li><a class="link" href="javascript:;">Process</a></li>
+			      <li><a class="link" href="javascript:;">About</a></li>
+			      <li><a class="link" href="javascript:;">Dad jokes</a></li>
+			      <li><a class="link" href="javascript:;">Contact</a></li>
+			    </ul>
+			  </nav>
+		</div> --}}
+
+
+		{{!-- <button class="menu-btn">
+			<span class="menu-btn--default">@@include('menu.svg')</span>
+		</button> --}}
+
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">
+			{{!-- &#9776; --}}
+			@@include('menu.svg')
+		</span>
+
+		<div id="myNav" class="overlay">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		  <div class="overlay-content">
+		    <a href="#">About</a>
+		    <a href="#">Services</a>
+		    <a href="#">Clients</a>
+		    <a href="#">Contact</a>
+		  </div>
 		</div>
+
+		
+
+
+		{{!-- <div class="menu">
+			<ul class="menu__list">
+				<li class="toc__item toc__item--current">
+					<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime">The Issue of Crime</a>
+				</li>
+				<li class="toc__item toc__item--current toc__item--intro">
+					<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/opener">The issue of crime</a>
+				</li>
+				<li class="toc__item">
+					<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/slain-soldier">Justice for a slain soldier</a>
+										</li>
+										<li class="toc__item">
+											<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/half-a-body">Half a body in a dumpster</a>
+										</li>
+										<li class="toc__item">
+											<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/crowbar">The crowbar and the damage done</a>
+										</li>
+										<li class="toc__item">
+											<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/niko">Who shot Niko?</a>
+										</li>
+										<li class="toc__item">
+											<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/bound-and-chastised">Bound and chastised</a>
+										</li>
+										<li class="toc__item">
+											<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/toll-of-duty">The toll of duty</a>
+										</li>
+										<li class="toc__item">
+											<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/fascinated">Why we’re fascinated by crime</a>
+										</li>
+										<li class="toc__item">
+											<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/kidnapped">Kidnapped on Cape Cod</a>
+										</li>
+										<li class="toc__item">
+											<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/unmarked-graves">Dig up two unmarked graves</a>
+										</li>
+										<li class="toc__item">
+											<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/combat-zone">Murder in the combat zone</a>
+										</li>
+										<li class="toc__item">
+											<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/died-anonymous">Two teenage boys died anonymous in Dorchester</a>
+										</li>
+										<li class="toc__item">
+											<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/friend-forget">A friend who can't forget</a>
+										</li>
+										<li class="toc__item">
+											<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/killed-campus">Killed off campus</a>
+										</li>
+										<li class="toc__item">
+											<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/capital-punishment">Capital punishment serves a purpose</a>
+										</li>
+										<li class="toc__item">
+											<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/slang">Crime’s slang lexicon</a>
+										</li>
+										<li class="toc__item">
+											<a class="toc__link js-toc-link" href="https://apps.bostonglobe.com/true-crime/brunch">Stuck-up at brunch</a>
+										</li>
+									</ul>
+								</div> --}}
+
+
+
+
 		<nav class='g-header__title'>
-			 <p id='series-logo'>Boston Revealed</p>
+			 <p id='series-logo' {{!-- class="miller-text-bold" --}}>Boston Revealed</p>
 			 <!-- <a href="{{@root.meta.index.sectionUrl}}"><p>Boston Revealed</p></a> -->
 		</nav>
 		{{#if @root.meta.index.social}}
 		<div class='g-header__share'>
+			<a href='http://www.bostonglobe.com'>
+				@@include('g-logo--sm.svg')
+			</a>
 			<a href='' class='g-header__share-button g-header__share-button--fb'>
 				@@include('facebook.svg')
 			</a>
