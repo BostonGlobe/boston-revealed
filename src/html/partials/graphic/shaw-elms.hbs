@@ -1,7 +1,4 @@
 {{#each shawelms.sections}}
-    {{#if partial}}
-        {{> (lookup . 'partial') }}
-    {{else}}
     <section class="content">
         <div class="content__container">
 
@@ -31,5 +28,7 @@
 
         </div>
     </section>
+    {{#if partial}}
+        {{> (lookup . 'partial') }}
     {{/if}}
 {{/each}}
