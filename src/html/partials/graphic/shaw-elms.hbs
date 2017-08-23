@@ -1,34 +1,47 @@
-{{#each shawelms.sections}}
-    <section class="content">
+<body class="shaw-elms">
+<section class="content">
+    {{#each shawelms.sections}}
         <div class="content__container">
 
             <h2 class="content__hed miller-banner-regular">{{subhed}}</h2>
 
             {{#each text}}
-                <p class="content__body">{{{value}}}</p>
-
                 {{#ifEquals type 'image'}}
-                    <img src="/{{@root.config.path}}/assets/shaw-elms/{{value}}.jpg" />
+                    <div class="{{value.class}}">
+                        <img src='/{{@root.config.path}}/assets/shaw-elms/{{value.src}}.jpg' alt='{{value.alt}}' />
+                        <p class="content__caption benton-regular">{{value.caption}}</p>
+                    </div>
                 {{/ifEquals}}
-
+                {{#ifEquals type 'text'}}
+                    <p class="content__body">{{{value}}}</p>
+                {{/ifEquals}}
             {{/each}}
 
             <h3 class="miller-banner-regular">{{h3}}</h3>
 
             <div class="content__caretakers">
-            {{#if about}}
-                {{#each about}}
-                    <div class="content__caretakers__profile">
-                        <h4 class="benton-bold">{{name}}</h4>
-                        <p class="benton-regular">{{bio}}</p>
-                    </div>
-                {{/each}}
-            {{/if}}
+                {{#if about}}
+                    {{#each about}}
+                        <div class="content__caretakers__profile">
+                            <h4 class="benton-bold">{{name}}</h4>
+                            <p class="benton-regular">{{bio}}</p>
+                        </div>
+                    {{/each}}
+                {{/if}}
             </div>
-
         </div>
-    </section>
-    {{#if partial}}
-        {{> (lookup . 'partial') }}
-    {{/if}}
-{{/each}}
+
+        {{#if partial}}
+            {{> (lookup . 'partial') }}
+        {{/if}}
+
+        <div class="{{class}}">
+        {{#if image}}
+            <img src='/{{@root.config.path}}/assets/shaw-elms/{{image}}.jpg' alt='{{alt}}' />
+            <p class="content__caption benton-regular">{{caption}}</p>
+        {{/if}}
+        </div>
+
+    {{/each}}
+</section>
+</body>

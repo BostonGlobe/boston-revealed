@@ -1,51 +1,79 @@
 {
-  "sections": [{
-    "subhed": "Boston Common’s oldest trees",
-    "text": [{
-      "type": "text",
-      "value": "At 24 Beacon St., in the northeast corner of Boston Common, a monument honoring Robert Gould Shaw and the Massachusetts 54th Regiment sits between two large, distinctive elm trees. Believed to have been planted by John Hancock, these trees are the oldest English elms in the Western Hemisphere."
-    }, {
-      "type": "text",
-      "value": "Documents from 1780 granted permission to plant the elms across from Hancock’s mansion when he was governor. Now part of a monument to the first African-American regiment in the Union Army, these trees have been dated and confirmed to have been planted between 1772 and 1812."
-    }, {
-      "type": "text",
-      "value": "The memorial was erected after the planting of the elms, causing concern at the time that the trees might be damaged or destroyed. After additional planning and consideration, the work was completed without any injury to the trees, adding beauty to the final tribute."
-    }]
-  }, {
-    "subhed": "Maintaining a part of history",
-    "text": [{
-      "type": "text",
-      "value": "While the Shaw Memorial had undergone several restorations since its unveiling, the two elms were neglected for many years. In 1927, it was thought that the trees wouldn’t survive much longer. However, the genetic potential of the trees is now known to estimate an average lifespan of 300 to 400 years."
-    }, {
-      "type": "text",
-      "value": "The location of the elms, with their roots restricted and encased by the monument, provides protection against diseases like Dutch Elm Disease. That restriction has also made the wood much denser, keeping insects out."
-    }, {
-      "type": "image",
-      "value": "shaw-bricks"
-    }, {
-      "type": "text",
-      "value": "The elms didn’t begin to receive restoration or maintenance of any kind until the seventies when arborist Henry Davis began overseeing the care of the trees, free of charge."
-    }, {
-      "type": "text",
-      "value": "Dramatic measures have been used to keep the trees safe from pests, rot, and the ravages of time, including filling them with bricks and lopping several feet off the treetops in 2013. To protect the tree and prevent damage to the sculpture, 6 to 8 feet of the treetops were removed to protect the tree."
-    }, {
-      "type": "text",
-      "value": "The trees are inspected every two weeks. This may include setting compost (leaf mold/organic matter), planting fertilizer every 30 days, testing soil, employing hydroponic care, monitoring for disease, and retrenchment pruning (cutting heavy or damaged parts of the trees to reduce weight). These maintenance measures keep the trees healthy, maintain growth, and strengthen the tree’s exterior—but also make them look strangely amputated over the winter."
-    }],
-    "partial": "graphic/shaw-elms-figure"
-  }, {
-    "subhed": "Caretakers",
-    "text": [{
-      "type": "text",
-      "value": "Amid social upheaval in the 1970s, most parks and common areas were neglected almost beyond repair. Since that time, the parks and their monuments have been revitalized by The Friends of the Public Gardens. Yet even these efforts are woefully underfunded and consistently under threat. For more information or to donate to help the restoration process, visit <a href=http://friendsofthepublicgarden.org/join-donate/>http://friendsofthepublicgarden.org/join-donate/</a>."
-    }],
-    "h3": "About the caretakers",
-    "about": [{
-      "name": "Henry Davis",
-      "bio": "For 45 years, arborist Henry Davis oversaw the care of the trees free of charge. Mayor Thomas Menino declared April 26, 2013 “Henry Davis Day” in the city of Boston. Since Davis’ retirement, the work has been carried on by Norm Helie."
-    }, {
-      "name": "Norm Helie",
-      "bio": "Consulting arborist and soil scientist for the Friends of the Public Garden, currently in charge of the elm’s maintenance."
-    }]
-  }]
+  "sections": [
+    {
+      "subhed": "Boston Common’s oldest trees",
+      "text": [
+        {
+          "type": "text",
+          "value": "At 24 Beacon St., in the northeast corner of Boston Common, a monument honoring Robert Gould Shaw and the Massachusetts 54th Regiment sits between two large, distinctive elm trees. Believed to have been planted by John Hancock, these trees are the oldest English elms in the Western Hemisphere."
+        },
+        {
+          "type": "text",
+          "value": "Documents from 1780 granted permission to plant the elms across from Hancock’s mansion when he was governor. Now part of a monument to the first African-American regiment in the Union Army, these trees have been dated and confirmed to have been planted between 1772 and 1812."
+        },
+        {
+          "type": "text",
+          "value": "The memorial was erected after the planting of the elms, causing concern at the time that the trees might be damaged or destroyed. After additional planning and consideration, the work was completed without any injury to the trees, adding beauty to the final tribute."
+        }
+      ],
+      "image": "shaw-elms-current",
+      "caption": "The Shaw Elms in their current state. During the winter months, the retrenchment pruning is particularly visible.",
+      "alt": "Shaw Elms Current"
+    },
+    {
+      "subhed": "Maintaining a part of history",
+      "text": [
+        {
+          "type": "text",
+          "value": "While the Shaw Memorial had undergone several restorations since its unveiling, the two elms were neglected for many years. In 1927, it was thought that the trees wouldn’t survive much longer. However, the genetic potential of the trees is now known to estimate an average lifespan of 300 to 400 years."
+        },
+        {
+          "type": "text",
+          "value": "The location of the elms, with their roots restricted and encased by the monument, provides protection against diseases like Dutch Elm Disease. That restriction has also made the wood much denser, keeping insects out."
+        },
+        {
+          "type": "image",
+          "value": {
+            "src": "shaw-bricks",
+            "caption": "Bricks were placed inside the tree in order to stabilize the tree trunk.",
+            "alt": "Shaw Bricks",
+            "class": "right-side"
+          }
+        },
+        {
+          "type": "text",
+          "value": "The elms didn’t begin to receive restoration or maintenance of any kind until the seventies when arborist Henry Davis began overseeing the care of the trees, free of charge."
+        },
+        {
+          "type": "text",
+          "value": "Dramatic measures have been used to keep the trees safe from pests, rot, and the ravages of time, including filling them with bricks and lopping several feet off the treetops in 2013. To protect the tree and prevent damage to the sculpture, 6 to 8 feet of the treetops were removed to protect the tree."
+        },
+        {
+          "type": "text",
+          "value": "The trees are inspected every two weeks. This may include setting compost (leaf mold/organic matter), planting fertilizer every 30 days, testing soil, employing hydroponic care, monitoring for disease, and retrenchment pruning (cutting heavy or damaged parts of the trees to reduce weight). These maintenance measures keep the trees healthy, maintain growth, and strengthen the tree’s exterior—but also make them look strangely amputated over the winter."
+        }
+      ],
+      "partial": "graphic/shaw-elms-figure"
+    },
+    {
+      "subhed": "Caretakers",
+      "text": [
+        {
+          "type": "text",
+          "value": "Amid social upheaval in the 1970s, most parks and common areas were neglected almost beyond repair. Since that time, the parks and their monuments have been revitalized by The Friends of the Public Gardens. Yet even these efforts are woefully underfunded and consistently under threat. For more information or to donate to help the restoration process, visit <a href=http://friendsofthepublicgarden.org/join-donate/>http://friendsofthepublicgarden.org/join-donate/</a>."
+        }
+      ],
+      "h3": "About the caretakers",
+      "about": [
+        {
+          "name": "Henry Davis",
+          "bio": "For 45 years, arborist Henry Davis oversaw the care of the trees free of charge. Mayor Thomas Menino declared April 26, 2013 “Henry Davis Day” in the city of Boston. Since Davis’ retirement, the work has been carried on by Norm Helie."
+        },
+        {
+          "name": "Norm Helie",
+          "bio": "Consulting arborist and soil scientist for the Friends of the Public Garden, currently in charge of the elm’s maintenance."
+        }
+      ]
+    }
+  ]
 }
